@@ -57,7 +57,7 @@ public class Ejecutar{
 	private void escucharCliente() throws IOException, ClassNotFoundException, SQLException {
 
 		while(true){
-			if(ss.isClosed() == true){
+			if(ss.isClosed()){
 				ss = new ServerSocket(PUERTO);
 			}
 			Socket cs = ss.accept();
