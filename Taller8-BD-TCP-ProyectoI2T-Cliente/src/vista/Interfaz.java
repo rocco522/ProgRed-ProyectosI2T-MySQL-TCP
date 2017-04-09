@@ -162,6 +162,7 @@ public class Interfaz extends JFrame {
 		btnAgregarUnRegistro.setBackground(SystemColor.textHighlight);
 		btnAgregarUnRegistro.setBounds(422, 300, 184, 30);
 		e.inicializarBtnAgregarUnRegistro(btnAgregarUnRegistro, AGREGAR_UN_REGISTRO);
+		btnAgregarUnRegistro.setEnabled(false);
 		contentPane.add(btnAgregarUnRegistro);
 		
 		btnAgregarRegistrosauto = new JButton(AGREGAR_REGISTROS_AUTO);
@@ -178,6 +179,7 @@ public class Interfaz extends JFrame {
 		btnEliminarUnRegistro.setBackground(SystemColor.textHighlight);
 		btnEliminarUnRegistro.setBounds(422, 340, 184, 30);
 		e.inicializarBtnEliminarUnRegistro(btnEliminarUnRegistro, ELIMINAR_UN_REGISTRO);
+		btnEliminarUnRegistro.setEnabled(false);
 		contentPane.add(btnEliminarUnRegistro);
 		
 		btnEliminarTablas = new JButton(ELIMINAR_TABLAS);

@@ -1,10 +1,8 @@
-package modelo;
+package control;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import control.Ejecutar;
 
 public class Consultas {
 
@@ -84,7 +82,7 @@ public class Consultas {
 				"('13', 'Ana María Rivera', '13000', '094589591', '3', 'Técnico'), "+ 
 				"('14', 'Lilly Duke', '14000', '094589905', '2', 'Tecnólogo'), "+ 
 				"('15', 'Francisco Ortiz', '15000', '094589203', '1', 'Estudiante'); ";
-		consultaGeneral += consulta + "\n";
+		consultaGeneral += consulta + "===";
 		st.executeUpdate(consulta);
 
 		//Insertar registros a proyectos
@@ -100,7 +98,7 @@ public class Consultas {
 				"('8', 'Licenciatura en Pedagogía Infantil', 'Mejoramiento del aprendizaje', 'Licenciatura en Pedagogía Infantil', '6000000'), "+ 
 				"('9', 'Tecnología en Mecatrónica - Discapacidad', 'Mejoramiento del aprendizaje', 'Tecnología en Mecatrónica - Discapacidad', '18000000'), "+ 
 				"('10', 'Cátedra Medellín Diversa e Incluyente', 'Mejoramiento del aprendizaje', 'Cátedra Medellín Diversa e Incluyente', '290000000'); ";
-		consultaGeneral += consulta + "\n";
+		consultaGeneral += consulta + "===";
 		st.executeUpdate(consulta);
 
 		//Insertar registros relaciones
@@ -149,7 +147,7 @@ public class Consultas {
 				"(NULL, '10', '10', '11'), "+
 				"(NULL, '10', '11', '11'), "+
 				"(NULL, '10', '12', '11');";
-		consultaGeneral += consulta + "\n";
+		consultaGeneral += consulta + "===";
 		st.executeUpdate(consulta);
 
 		ejecutar.setConsultaGeneral(consultaGeneral);
@@ -221,7 +219,7 @@ public class Consultas {
 		while(resultado.next()){
 			String nombre = resultado.getString(1);
 			String titulo = resultado.getString(2);
-			datos += nombre +" ---- "+titulo+"\n";
+			datos += nombre +" ---- "+titulo+"===";
 		}
 		
 		consultaGeneral += consulta;
@@ -247,7 +245,7 @@ public class Consultas {
 		while(resultado.next()){
 			String nombre = resultado.getString(1);
 			String presupuesto = resultado.getString(2);
-			datos += nombre +" ---- "+presupuesto+"\n";
+			datos += nombre +" ---- "+presupuesto+"===";
 		}
 		
 		consultaGeneral += consulta;
@@ -272,7 +270,7 @@ public class Consultas {
 
 		while(resultado.next()){
 			String nombre = resultado.getString(1);
-			datos += nombre +"\n";
+			datos += nombre +"===";
 		}
 		
 		consultaGeneral += consulta;
